@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>portfolio website</title>
+<!--font-awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!--file css -->
+<link rel="stylesheet" href="css/styl.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#" class="logo"><span>TK</span> <code>ZR</code></a>
+        <ul class="links">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <i id="btnMenu"   class="fa-solid fa-bars"></i>
+    </nav> 
+</header>
+<div class="hero-sec">
+    <div class="contanier">
+        <div class="div-text">
+            <h1>TAREK ZERI </h1>
+            <span>💻 ERP Consultant | Database Engineer | Web Developer</span>
+            <p>Passionate about technology and problem-solving. Experienced with ERP systems (SAP, Sage X3, Silwane), Databases (SQL, MySQL), and Web Development (HTML, CSS, JavaScript, Python, C++). Always learning and building solutions that add real value.</p>
+            <a href="#" class="btn">My works</a>
+        </div>
+        <div class="div-img">
+            <img src="image/tarek.png" alt="">
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    let btnMenu = document.getElementById("btnMenu");
+    let Navlinks = document.querySelector(".links");
+    btnMenu.onclick = function (){
+        btnMenu.classList.toggle("fa-times") 
+        Navlinks.classList.toggle("active")
+    }
+    
+    
+    </script>
+</html>
