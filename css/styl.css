@@ -12,15 +12,17 @@ header{
     right: 0;
     border-bottom: 1px solid #afafaf93;
     z-index: 100;
+    background: #000;
 
 }
 header nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Assure que les éléments restent sur la même ligne */
     align-items: center;
     width: 85%;
     margin: auto;
     height: 80px;
+    flex-wrap: wrap; /* Permet d'ajuster les éléments sur plusieurs lignes si nécessaire */
 }
 header nav .logo{
     color: #fff;
@@ -59,10 +61,16 @@ header nav .links li a{
     font-size: 17px;
     
 }
+header nav .social-links {
+    display: flex; /* Afficher les icônes sur une seule ligne */
+    justify-content: flex-start; /* Aligner les icônes à gauche */
+    gap: 15px; /* Espacement entre les icônes */
+    order: -1; /* Placer les icônes avant le menu et le logo */
+    color: goldenrod; /* Couleur des icônes */
+}
 header nav .social-links a i{
-    color: goldenrod;
-    font-size: 24px;
-    margin-left: 15px;
+    color: goldenrod; /* Couleur des icônes */
+    font-size: 24px; /* Taille des icônes */
 }
 header nav .social-links a i:hover{
 color: #fff;
@@ -124,6 +132,224 @@ right: 0;
 }
 #btnMenu{
     display: none;
+}
+/* Contact Section */
+    #contact-section {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90vw;
+            max-width: 500px;
+            height: auto;
+            z-index: 9999;
+            background: #222;
+            padding: 50px 40px 40px 40px;
+            display: none;
+            overflow-y: auto;
+            box-shadow: 0 0 30px #000a;
+            border-radius: 20px;
+    }
+    .contact-container {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            color: white; /* Couleur de texte en blanc */
+    }
+    .contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+.contact-container li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.contact-container i {
+    color: goldenrod;
+    font-size: 22px;
+}
+/* Formation & Certification Section */
+    #formation-section {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90vw;
+            max-width: 500px;
+            height: auto;
+            z-index: 9999;
+            background: #222;
+            padding: 50px 40px 40px 40px;
+            display: none;
+            overflow-y: auto;
+            box-shadow: 0 0 30px #000a;
+            border-radius: 20px;
+    }
+    .formation-container {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            color: goldenrod;
+    }
+    .formation-container p {
+            font-size: 18px;
+            color: rgb(241, 240, 236);
+            line-height: 1.5;
+            margin: 20px 0;
+    }
+    @media (min-width: 981px) {
+        #formation-section {
+            max-width: 700px;
+            padding: 70px 60px 60px 60px;
+        }
+        .formation-container p {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 450px) {
+        #formation-section {
+            max-width: 95vw;
+            padding: 36px 8px 24px 60px;
+            border-radius: 16px;
+        }
+        .formation-container p {
+            font-size: 16px;
+        }
+    }
+    /* Formation & Certification Section - Texte en blanc */
+#formation-section ul li {
+    color: white; /* Texte des formations en blanc */
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+/* About Me Section */
+#about-section {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 500px;
+    height: auto;
+    z-index: 9999;
+    background: #222;
+    padding: 50px 40px 40px 40px;
+    display: none;
+    overflow-y: auto;
+    box-shadow: 0 0 30px #000a;
+    border-radius: 20px;
+}
+
+.about-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: goldenrod;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: rgb(241, 240, 236);
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+@media (min-width: 981px) {
+    #about-section {
+        max-width: 700px;
+        padding: 70px 60px 60px 60px;
+    }
+    .about-container p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    #about-section {
+        max-width: 95vw;
+        padding: 36px 8px 24px 60px;
+        border-radius: 16px;
+    }
+    .about-container p {
+        font-size: 16px;
+    }
+}
+/* Projects & Experience Section */
+#projects-section {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 500px;
+    height: auto;
+    z-index: 9999;
+    background: #222;
+    padding: 50px 40px 40px 40px;
+    display: none;
+    overflow-y: auto;
+    box-shadow: 0 0 30px #000a;
+    border-radius: 20px;
+}
+
+.projects-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: goldenrod;
+}
+
+.projects-container p {
+    font-size: 18px;
+    color: rgb(241, 240, 236);
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+@media (min-width: 981px) {
+    #projects-section {
+        max-width: 700px;
+        padding: 70px 60px 60px 60px;
+    }
+    .projects-container p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    #projects-section {
+        max-width: 95vw;
+        padding: 36px 8px 24px 60px;
+        border-radius: 16px;
+    }
+    .projects-container p {
+        font-size: 16px;
+    }
 }
 /* responsive */
 @media (max-width : 980px) {
@@ -189,5 +415,104 @@ right: 0;
     .hero-sec .contanier .div-img{
         position: relative;
         width: 70%;
+    }
+}
+/* Uniformisation des styles pour toutes les fenêtres, y compris Contact */
+#contact-section,
+#formation-section,
+#about-section,
+#projects-section {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 500px;
+    height: auto;
+    z-index: 9999;
+    background: #222;
+    padding: 50px 40px 40px 40px;
+    display: none;
+    overflow-y: auto;
+    box-shadow: 0 0 30px #000a;
+    border-radius: 20px;
+}
+
+.contact-container,
+.formation-container,
+.about-container,
+.projects-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: goldenrod;
+}
+
+.contact-container p,
+.formation-container p,
+.about-container p,
+.projects-container p {
+    font-size: 18px;
+    color: rgb(241, 240, 236);
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+@media (min-width: 981px) {
+    #contact-section,
+    #formation-section,
+    #about-section,
+    #projects-section {
+        max-width: 700px;
+        padding: 70px 60px 60px 60px;
+    }
+    .contact-container p,
+    .formation-container p,
+    .about-container p,
+    .projects-container p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    #contact-section,
+    #formation-section,
+    #about-section,
+    #projects-section {
+        max-width: 95vw;
+        padding: 36px 8px 24px 60px;
+        border-radius: 16px;
+    }
+    .contact-container p,
+    .formation-container p,
+    .about-container p,
+    .projects-container p {
+        font-size: 16px;
+    }
+}
+
+#contact-section ul li {
+    /* Couleur de texte en blanc pour toutes les informations */
+    color: white;
+}
+#formation-section h2,
+#contact-section h2 {
+    /* Uniformisation de l'espacement avec About Me */
+    margin-bottom: 20px; /* Même espacement que le titre et le paragraphe de About Me */
+}
+@media (min-width: 981px) {
+    header nav {
+        justify-content: space-between; /* Répartir les éléments sur toute la largeur */
+    }
+
+    header nav .social-links {
+        order: 0; /* Remettre les icônes à leur position d'origine à droite */
+        justify-content: flex-end; /* Aligner les icônes à droite */
+        gap: 15px; /* Espacement entre les icônes */
     }
 }

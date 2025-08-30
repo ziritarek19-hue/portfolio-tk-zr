@@ -16,15 +16,19 @@
         <a href="#" class="logo"><span>TK</span> <code>ZR</code></a>
         <ul class="links">
             <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">skills</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects & Experience</a></li>
+            <li><a href="#">Formation & Certification</a></li>
             <li><a href="#">contact</a></li>
         </ul>
         <div class="social-links">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tarek-ziri" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/ziritarek19-hue" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        
         </div>
         <i id="btnMenu"   class="fa-solid fa-bars"></i>
     </nav> 
@@ -33,24 +37,194 @@
     <div class="contanier">
         <div class="div-text">
             <h1>TAREK ZERI </h1>
-            <span>💻 ERP Consultant | Database Engineer | Web Developer</span>
-            <p>Passionate about technology and problem-solving. Experienced with ERP systems (SAP, Sage X3, Silwane), Databases (SQL, MySQL), and Web Development (HTML, CSS, JavaScript, Python, C++). Always learning and building solutions that add real value.</p>
-            <a href="#" class="btn">My works</a>
+            <span>💻 ERP Consultant | Database Engineer | Web Frontend Developer</span>
+            <p>Passionate about technology and problem-solving, with experience in ERP systems (SAP, Sage X3, Silwane), databases (SQL, MySQL), and Web Frontend Developer (HTML, CSS, JavaScript, Python, C++). Continuously learning and building solutions that deliver real value.</p>
+            <a href="pdf/cv-viewer.html" class="btn" target="_blank">My Curriculum Vitae</a>
         </div>
         <div class="div-img">
             <img src="image/tarek.png" alt="">
         </div>
     </div>
 </div>
-</body>
+
+<!-- Contact Section (hidden by default) -->
+<section id="contact-section" style="display:none;">
+  <div class="contact-container">
+    <h2><i class="fa-solid fa-address-book"></i> Contact</h2>
+    <ul>
+      <li><i class="fa-solid fa-phone"></i> +213 667771828</li>
+      <li><i class="fa-solid fa-envelope"></i> ziri.tarek.19@gmail.com</li>
+      <li><i class="fa-solid fa-envelope"></i> ziri.tarek.20@gmail.com</li>
+      <li><i class="fa-solid fa-envelope"></i> ziri.tarek.19@icloud.com</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Formation & Certification Section -->
+<section id="formation-section" style="display:none;">
+  <div class="formation-container">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Formation & Certification</h2>
+    <ul>
+      <li style="color: white;">
+        Bachelor’s Degree in Information Systems by Sétif (UFAS)
+        <a href="https://fsciences.univ-setif.dz/GP_FR/Lincence_Informatique.html" target="_blank" rel="noopener noreferrer" class="btn">View</a>
+      </li>
+      <li style="color: white;">
+        Google IT Support Professional Certificate by Coursera & Google
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/K8YK5RU3RU8Y" target="_blank" rel="noopener noreferrer" class="btn">View</a>
+      </li>
+      <li style="color: white;">
+        CCNA: Switching, Routing, and Wireless Essentials by Cisco
+        <a href="https://www.credly.com/badges/eb5f90c6-6103-498a-82b9-6e4a53c2d05e" target="_blank" rel="noopener noreferrer" class="btn">View</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- About Me Section (hidden by default) -->
+<section id="about-section" style="display:none;">
+  <div class="about-container">
+    <h2><i class="fa-solid fa-user"></i> About Me</h2>
+    <p>
+I am Tarek Zeri, a 25-year-old Algerian professional with a Bachelor’s Degree in Computer Science, currently pursuing a Master’s in Data Engineering and Web Technologies (IDTW) while working as an ERP Deployment Consultant. I specialize in the deployment, configuration, and user training of ERP .
+
+Passionate about technology, I am also a Web Frontend Developer and have strong skills in network administration, virtualization (VM), and IT support (Cisco CCNA, Google IT Support). I am committed to improving system efficiency and operational performance, and my goal is to create impactful solutions that drive innovation, efficiency, and optimization across IT and business systems.
+    </p>
+  </div>
+</section>
+
+<!-- Projects & Experience Section (hidden by default) -->
+<section id="projects-section" style="display:none;">
+  <div class="projects-container">
+    <h2><i class="fa-solid fa-briefcase"></i> Projects & Experience</h2>
+    <p>
+      From December 2022, I worked as an IT Intern at SAMHA SPA (Brandt) where I managed support tickets, assisted users, and diagnosed and maintained IT equipment. In March 2023, I joined EURL SATEREX (IRIS) as an IT Intern, assisting with Sage X3 ERP and system configuration while providing technical support. From September 2023, I worked as a Geolocation Agent at EURL SATEREX, ensuring data security and privacy, planning routes, and producing reports and documentation. Since May 2024, I have been a Technical Sales & ERP Deployment Consultant at Intellix, Algiers, responsible for installing and deploying software configuring and managing networks, , and training clients on multiple software modules.
+  </div>
+</section>
+
 <script>
     let btnMenu = document.getElementById("btnMenu");
     let Navlinks = document.querySelector(".links");
-    btnMenu.onclick = function (){
-        btnMenu.classList.toggle("fa-times") 
-        Navlinks.classList.toggle("active")
+    let contactSection = document.getElementById('contact-section');
+    let formationSection = document.getElementById('formation-section');
+    let aboutSection = document.getElementById('about-section');
+    let projectsSection = document.getElementById('projects-section');
+
+    btnMenu.onclick = function () {
+        btnMenu.classList.toggle("fa-times");
+        Navlinks.classList.toggle("active");
+
+        // Responsive: changer HOME en MENU sur mobile/tablette
+        let homeLink = document.querySelector('.links li.active a');
+        if (Navlinks.classList.contains("active") && window.innerWidth <= 980) {
+            if (homeLink && homeLink.textContent.trim().toUpperCase() === "HOME") {
+                homeLink.textContent = "MENU";
+            }
+        } else {
+            if (homeLink && homeLink.textContent.trim().toUpperCase() === "MENU") {
+                homeLink.textContent = "HOME";
+            }
+        }
+
+        // Si le menu se ferme, on masque les fenêtres de contact et de formation
+        if (!Navlinks.classList.contains("active")) {
+            if (contactSection && contactSection.style.display === 'block') {
+                contactSection.style.display = 'none';
+            }
+            if (formationSection && formationSection.style.display === 'block') {
+                formationSection.style.display = 'none';
+            }
+            if (aboutSection && aboutSection.style.display === 'block') {
+                aboutSection.style.display = 'none';
+            }
+            if (projectsSection && projectsSection.style.display === 'block') {
+                projectsSection.style.display = 'none';
+            }
+        }
     }
-    
-    
-    </script>
+
+    // Contact section toggle (open/close on click)
+    document.querySelectorAll('.links li a').forEach(function(link){
+        link.addEventListener('click', function(e){
+            if(link.textContent.trim().toLowerCase() === 'contact'){
+                e.preventDefault();
+                if (contactSection) {
+                    if (contactSection.style.display === 'block') {
+                        contactSection.style.display = 'none';
+                    } else {
+                        contactSection.style.display = 'block';
+                        window.scrollTo({ top: contactSection.offsetTop - 80, behavior: 'smooth' });
+                    }
+                }
+            } else {
+                if (contactSection) {
+                    contactSection.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // Formation section toggle (open/close on click)
+    document.querySelectorAll('.links li a').forEach(function(link){
+        link.addEventListener('click', function(e){
+            if(link.textContent.trim().toLowerCase() === 'formation & certification'){
+                e.preventDefault();
+                if (formationSection) {
+                    if (formationSection.style.display === 'block') {
+                        formationSection.style.display = 'none';
+                    } else {
+                        formationSection.style.display = 'block';
+                        window.scrollTo({ top: formationSection.offsetTop - 80, behavior: 'smooth' });
+                    }
+                }
+            } else {
+                if (formationSection) {
+                    formationSection.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // About Me section toggle (open/close on click)
+    document.querySelectorAll('.links li a').forEach(function(link){
+        link.addEventListener('click', function(e){
+            if(link.textContent.trim().toLowerCase() === 'about me'){
+                e.preventDefault();
+                if (aboutSection) {
+                    if (aboutSection.style.display === 'block') {
+                        aboutSection.style.display = 'none';
+                    } else {
+                        aboutSection.style.display = 'block';
+                        window.scrollTo({ top: aboutSection.offsetTop - 80, behavior: 'smooth' });
+                    }
+                }
+            } else {
+                if (aboutSection) {
+                    aboutSection.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // Projects & Experience section toggle (open/close on click)
+    document.querySelectorAll('.links li a').forEach(function(link){
+        link.addEventListener('click', function(e){
+            if(link.textContent.trim().toLowerCase() === 'projects & experience'){
+                e.preventDefault();
+                if (projectsSection) {
+                    if (projectsSection.style.display === 'block') {
+                        projectsSection.style.display = 'none';
+                    } else {
+                        projectsSection.style.display = 'block';
+                        window.scrollTo({ top: projectsSection.offsetTop - 80, behavior: 'smooth' });
+                    }
+                }
+            } else {
+                if (projectsSection) {
+                    projectsSection.style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
 </html>
