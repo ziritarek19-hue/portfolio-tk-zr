@@ -37,24 +37,24 @@
 </head>
 <body>
     <h1>View or Download My CV</h1>
-    <a href="file:///C:/PORTFOLIO1/pdf/cv-english.pdf.pdf" target="_blank" class="btn">CV in English</a>
-    <a href="file:///C:/PORTFOLIO1/pdf/cv-french.pdf.pdf" target="_blank" class="btn">CV in French</a>
+    <a href="cv-english.pdf" target="_blank" class="btn">CV in English</a>
+    <a href="cv-french.pdf" target="_blank" class="btn">CV in French</a>
 
-    <iframe id="cv-viewer" src="file:///C:/PORTFOLIO1/pdf/cv-english.pdf.pdf"></iframe>
+    <iframe id="cv-viewer" src="cv-english.pdf"></iframe>
 
     <script>
-        const englishBtn = document.querySelector('a[href="file:///C:/PORTFOLIO1/pdf/cv-english.pdf.pdf"]');
-        const frenchBtn = document.querySelector('a[href="file:///C:/PORTFOLIO1/pdf/cv-french.pdf.pdf"]');
+        const englishBtn = document.querySelector('a[href="cv-english.pdf"]');
+        const frenchBtn = document.querySelector('a[href="cv-french.pdf"]');
         const iframe = document.getElementById('cv-viewer');
 
         englishBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            iframe.src = 'file:///C:/PORTFOLIO1/pdf/cv-english.pdf.pdf';
+            iframe.src = 'cv-english.pdf';
         });
 
         frenchBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            iframe.src = 'file:///C:/PORTFOLIO1/pdf/cv-french.pdf.pdf';
+            iframe.src = 'cv-french.pdf';
         });
     </script>
 </body>
