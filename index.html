@@ -19,7 +19,7 @@
             <li><a href="#">About Me</a></li>
             <li><a href="#">Projects & Experience</a></li>
             <li><a href="#">Formation & Certification</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/tarek-ziri" target="_blank" rel="noopener noreferrer">
@@ -33,6 +33,8 @@
         <i id="btnMenu"   class="fa-solid fa-bars"></i>
     </nav> 
 </header>
+<!-- Overlay backdrop -->
+<div id="overlay"></div>
 <div class="hero-sec">
     <div class="contanier">
         <div class="div-text">
@@ -49,6 +51,7 @@
 
 <!-- Contact Section (hidden by default) -->
 <section id="contact-section" style="display:none;">
+  <button class="close-btn" aria-label="Close Contact Section">×</button>
   <div class="contact-container">
     <h2><i class="fa-solid fa-address-book"></i> Contact</h2>
     <ul>
@@ -62,6 +65,7 @@
 
 <!-- Formation & Certification Section -->
 <section id="formation-section" style="display:none;">
+  <button class="close-btn" aria-label="Close Formation Section">×</button>
   <div class="formation-container">
     <h2><i class="fa-solid fa-graduation-cap"></i> Formation & Certification</h2>
     <ul>
@@ -83,6 +87,7 @@
 
 <!-- About Me Section (hidden by default) -->
 <section id="about-section" style="display:none;">
+  <button class="close-btn" aria-label="Close About Section">×</button>
   <div class="about-container">
     <h2><i class="fa-solid fa-user"></i> About Me</h2>
     <p>
@@ -95,6 +100,7 @@ Passionate about technology, I am also a Web Frontend Developer and have strong 
 
 <!-- Projects & Experience Section (hidden by default) -->
 <section id="projects-section" style="display:none;">
+  <button class="close-btn" aria-label="Close Projects Section">×</button>
   <div class="projects-container">
     <h2><i class="fa-solid fa-briefcase"></i> Projects & Experience</h2>
     <p>
@@ -143,88 +149,7 @@ Passionate about technology, I am also a Web Frontend Developer and have strong 
         }
     }
 
-    // Contact section toggle (open/close on click)
-    document.querySelectorAll('.links li a').forEach(function(link){
-        link.addEventListener('click', function(e){
-            if(link.textContent.trim().toLowerCase() === 'contact'){
-                e.preventDefault();
-                if (contactSection) {
-                    if (contactSection.style.display === 'block') {
-                        contactSection.style.display = 'none';
-                    } else {
-                        contactSection.style.display = 'block';
-                        window.scrollTo({ top: contactSection.offsetTop - 80, behavior: 'smooth' });
-                    }
-                }
-            } else {
-                if (contactSection) {
-                    contactSection.style.display = 'none';
-                }
-            }
-        });
-    });
 
-    // Formation section toggle (open/close on click)
-    document.querySelectorAll('.links li a').forEach(function(link){
-        link.addEventListener('click', function(e){
-            if(link.textContent.trim().toLowerCase() === 'formation & certification'){
-                e.preventDefault();
-                if (formationSection) {
-                    if (formationSection.style.display === 'block') {
-                        formationSection.style.display = 'none';
-                    } else {
-                        formationSection.style.display = 'block';
-                        window.scrollTo({ top: formationSection.offsetTop - 80, behavior: 'smooth' });
-                    }
-                }
-            } else {
-                if (formationSection) {
-                    formationSection.style.display = 'none';
-                }
-            }
-        });
-    });
-
-    // About Me section toggle (open/close on click)
-    document.querySelectorAll('.links li a').forEach(function(link){
-        link.addEventListener('click', function(e){
-            if(link.textContent.trim().toLowerCase() === 'about me'){
-                e.preventDefault();
-                if (aboutSection) {
-                    if (aboutSection.style.display === 'block') {
-                        aboutSection.style.display = 'none';
-                    } else {
-                        aboutSection.style.display = 'block';
-                        window.scrollTo({ top: aboutSection.offsetTop - 80, behavior: 'smooth' });
-                    }
-                }
-            } else {
-                if (aboutSection) {
-                    aboutSection.style.display = 'none';
-                }
-            }
-        });
-    });
-
-    // Projects & Experience section toggle (open/close on click)
-    document.querySelectorAll('.links li a').forEach(function(link){
-        link.addEventListener('click', function(e){
-            if(link.textContent.trim().toLowerCase() === 'projects & experience'){
-                e.preventDefault();
-                if (projectsSection) {
-                    if (projectsSection.style.display === 'block') {
-                        projectsSection.style.display = 'none';
-                    } else {
-                        projectsSection.style.display = 'block';
-                        window.scrollTo({ top: projectsSection.offsetTop - 80, behavior: 'smooth' });
-                    }
-                }
-            } else {
-                if (projectsSection) {
-                    projectsSection.style.display = 'none';
-                }
-            }
-        });
-    });
 </script>
+<script src="js/menu.js"></script>
 </html>
